@@ -23,7 +23,8 @@
     "clean": "rimraf ./dist",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "build-ts": "tsc -p tsconfig.build.json",
-    "build": "npm run clean && npm run build-ts && npm run build-css"
+    "build": "npm run clean && npm run build-ts && npm run build-css",
+    "release": "auto shipit"
   },
   "eslintConfig": {
     "extends": [
