@@ -2,6 +2,9 @@
   "name": "sxw-react-components",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -17,10 +20,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "clean": "rimraf ./dist",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
+    "build-ts": "tsc -p tsconfig.build.json",
+    "build": "npm run clean && npm run build-ts && npm run build-css"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "auto": "^10.36.5",
+    "node-sass": "^7.0.1"
   }
 }
