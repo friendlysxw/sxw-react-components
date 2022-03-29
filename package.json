@@ -23,13 +23,25 @@
     "clean": "rimraf ./dist",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "build-ts": "tsc -p tsconfig.build.json",
-    "build": "npm run clean && npm run build-ts && npm run build-css",
-    "release": "auto shipit"
+    "build": "yarn clean && yarn build-ts && yarn build-css",
+    "release": "auto shipit",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -45,7 +57,19 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/node-logger": "^6.4.19",
+    "@storybook/preset-create-react-app": "^4.1.0",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
     "auto": "^10.36.5",
-    "node-sass": "^7.0.1"
+    "chromatic": "^6.5.3",
+    "node-sass": "^7.0.1",
+    "webpack": "^5.70.0"
   }
 }
