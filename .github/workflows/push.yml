@@ -34,5 +34,5 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           yarn install --frozen-lockfile
-          sudo yarn build
+          yarn build
           yarn release
