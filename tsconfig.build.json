@@ -16,7 +16,9 @@
   "exclude": [
     // 排除不需要编译的文件
     "src/**/*.test.tsx",
-    "src/**/*.stories.tsx",
-    "src/setupTests.ts"
+    "src/stories/*",
+    "src/setupTests.ts",
+    "src/react-app-env.d.ts",
+    "src/reportWebVitals.ts"
   ]
 }

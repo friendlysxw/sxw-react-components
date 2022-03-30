@@ -1,41 +1,42 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+/*
+ * @Author: your name
+ * @Date: 2022-03-30 06:17:47
+ * @LastEditTime: 2022-03-30 17:52:20
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \sxw-react-components\src\stories\MyButton.stories.tsx
+ */
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+// 引入Button组件
+import Button from "../components/Button/button";
+import "../styles/button.scss";
 
-import { Button } from './Button';
-
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+// 定义故事的元数据
 export default {
-  title: 'Example/Button',
+  title: "Components/Button",
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
+  parameters: {
+    componentSubtitle: "按钮组件",
   },
 } as ComponentMeta<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+// 定义故事的组件模板
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
+// 主要的按钮
 export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  primary: true,
-  label: 'Button',
+  children: "Primary",
+  state: "primary",
 };
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
+// 危险的按钮
+export const Danger = Template.bind({});
+Danger.args = {
+  children: "Danger",
+  state: "danger",
 };
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+// 成功的按钮
+export const Success = Template.bind({});
+Success.args = {
+  children: "Success",
+  state: "success",
 };
