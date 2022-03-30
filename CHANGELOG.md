@@ -1,3 +1,17 @@
+# v0.1.2 (Wed Mar 30 2022)
+
+#### ⚠️ Pushed to `master`
+
+- fix: update json ([@friendlysxw](https://github.com/friendlysxw))
+- fix: del sudo ([@friendlysxw](https://github.com/friendlysxw))
+- fix: npm publish ([@friendlysxw](https://github.com/friendlysxw))
+
+#### Authors: 1
+
+- shixuewen ([@friendlysxw](https://github.com/friendlysxw))
+
+---
+
 # v0.1.1 (Wed Mar 30 2022)
 
 #### Pushed to `master`
