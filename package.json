@@ -1,7 +1,7 @@
 {
   "name": "sxw-react-components",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "author": "shixuewen <friendlysxw@163.com>",
   "repository": "git@github.com:friendlysxw/sxw-react-components.git",
   "main": "dist/index.js",
@@ -29,7 +29,8 @@
     "build": "yarn clean && yarn build-ts && yarn build-css",
     "release": "auto shipit",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "auto": "auto"
   },
   "eslintConfig": {
     "extends": [
