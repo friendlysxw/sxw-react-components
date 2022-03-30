@@ -1,3 +1,15 @@
+# v0.1.3 (Wed Mar 30 2022)
+
+#### 🐛 Bug Fix
+
+- F button shixuewen [#1](https://github.com/friendlysxw/sxw-react-components/pull/1) ([@friendlysxw](https://github.com/friendlysxw))
+
+#### Authors: 1
+
+- shixuewen ([@friendlysxw](https://github.com/friendlysxw))
+
+---
+
 # v0.1.2 (Wed Mar 30 2022)
 
 #### ⚠️ Pushed to `master`
